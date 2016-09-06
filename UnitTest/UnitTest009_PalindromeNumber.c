@@ -6,7 +6,7 @@ typedef enum {
 } bool;
 
 bool isPalindrome(int x) {
-  int digitCnt = 1;
+  int digitCnt = 0;
   int n, i, k, resPower, remainder, quotient;
 
   if (x < 0)
@@ -15,11 +15,11 @@ bool isPalindrome(int x) {
   if (x >= 0 && x < 10)
     return true;
 
-  resPower = 10;
+  k = x;
   do {
     digitCnt++;
-    resPower *= 10; 
-  } while (x / resPower != 0);
+    k = k / 10; 
+  } while (k != 0);
   printf("The digit number of %d is %d.\n", x, digitCnt);
 
   k = digitCnt;
