@@ -4,7 +4,7 @@ C stuffs in leetcode.com
 
 ## Table of Contents
 
-- #9 Palindrome Number
+- [#9 Palindrome Number](https://github.com/heray1990/LeetCodeInC#9-palindrome-number)
 
 ## #9 Palindrome Number
 
