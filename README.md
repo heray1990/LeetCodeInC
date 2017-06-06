@@ -33,7 +33,7 @@ return [0, 1].
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/001_TwoSum.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/001_TwoSum.c)
 
-#2 Add Two Numbers
+## #2 Add Two Numbers
 
 **Link in leetcode.com:**
 
