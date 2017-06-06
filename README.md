@@ -4,7 +4,29 @@ C stuffs in leetcode.com
 
 ## Table of Contents
 
+- [#1 Two Sum](https://github.com/heray1990/LeetCodeInC#1-two-sum)
 - [#9 Palindrome Number](https://github.com/heray1990/LeetCodeInC#9-palindrome-number)
+
+## #1 Two Sum
+
+**Link in leetcode.com:**
+
+[https://leetcode.com/problems/two-sum/#/description](https://leetcode.com/problems/two-sum/#/description)
+
+**Problem description:**
+
+Given an array of integers, return **indices** of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have ***exactly*** one solution, and you may not use the *same* element twice.
+
+**Example:**
+
+```
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+```
 
 ## #9 Palindrome Number
 
