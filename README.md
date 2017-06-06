@@ -28,6 +28,10 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 ```
 
+**Source code:**
+
+[https://github.com/heray1990/LeetCodeInC/blob/master/Solution/001_TwoSum.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/001_TwoSum.c)
+
 ## #9 Palindrome Number
 
 **Link in leetcode.com:**
