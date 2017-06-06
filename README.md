@@ -5,6 +5,7 @@ C stuffs in leetcode.com
 ## Table of Contents
 
 - [#1 Two Sum](https://github.com/heray1990/LeetCodeInC#1-two-sum)
+- [#2 Add Two Numbers](https://github.com/heray1990/LeetCodeInC#2-add-two-numbers)
 - [#9 Palindrome Number](https://github.com/heray1990/LeetCodeInC#9-palindrome-number)
 
 ## #1 Two Sum
@@ -31,6 +32,26 @@ return [0, 1].
 **Source code:**
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/001_TwoSum.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/001_TwoSum.c)
+
+#2 Add Two Numbers
+
+**Link in leetcode.com:**
+
+[https://leetcode.com/problems/add-two-numbers/#/description](https://leetcode.com/problems/add-two-numbers/#/description)
+
+**Problem description:**
+
+You are given two **non-empty** linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+**Input:** (2 -> 4 -> 3) + (5 -> 6 -> 4)
+
+**Output:** 7 -> 0 -> 8
+
+**Source code:**
+
+
 
 ## #9 Palindrome Number
 
