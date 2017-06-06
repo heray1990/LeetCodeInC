@@ -25,36 +25,35 @@ int* twoSum(int* nums, int numsSize, int target) {
     *(tmp + i + 1) = key;
   }
 
-  for(i = numsSize - 1; i >= 0; i--) {
+  for(i = numsSize - 1; i > 0; i--) {
     if(*(tmp + i) * 2 < target) {
       break;
     }
 
-    if((*(tmp + i) <= target) && (*(tmp + i) * 2 >= target)) {
-      for(j = 0; j < i; j++) {
-        if(*(tmp + i) + *(tmp + j) > target) {
-            break;
-        }
+    for(j = 0; j < i; j++) {
+      if(*(tmp + i) + *(tmp + j) > target) {
+          break;
+      }
 
-        if(*(tmp + i) + *(tmp + j) == target) {
-          int m = 0;
-          int n = 0;
+      if(*(tmp + i) + *(tmp + j) == target) {
+        int m = 0;
+        int n = 0;
 
-          for(m = 0; m < numsSize; m++) {
-            if((*(tmp + i) == *(nums + m)) || (*(tmp + j) == *(nums + m))) {
-              if(n == 0) {
-                *res = m;
-                n++;
-              }
-              else {
-                *(res + 1) = m;
-              }
+        for(m = 0; m < numsSize; m++) {
+          if((*(tmp + i) == *(nums + m)) || (*(tmp + j) == *(nums + m))) {
+            if(n == 0) {
+              *res = m;
+              n++;
+            }
+            else {
+              *(res + 1) = m;
             }
           }
-          free(tmp);
-          tmp = NULL;
-          return res;
         }
+        free(tmp);
+        tmp = NULL;
+
+        return res;
       }
     }
   }
@@ -63,12 +62,13 @@ int* twoSum(int* nums, int numsSize, int target) {
   *(res + 1) = 0;
   free(tmp);
   tmp = NULL;
+
   return res;
 }
 
 int main() {
-  int nums[] = {10, 0, 1, 6, 2, 4, 7};
-  int target = 9;
+  int nums[] = {-3, 4, 3, 90};
+  int target = 0;
   int len = sizeof(nums) / sizeof(int);
   int* result = (int *)malloc(2 * sizeof(int));
  
@@ -87,6 +87,15 @@ int main() {
 
   printf("Because nums[%d] + nums[%d] = %d + %d = %d,\n",
     *result, *(result + 1), *(nums + *result), *(nums + *(result + 1)), target);
+
+  if((*result == 0) && (*(result + 1) == 0)) {
+    printf("return NULL\n");
+    free(result);
+    result = NULL;
+
+    return 0;
+  }
+
   printf("return [%d, %d]\n", *result, *(result + 1));
 
   free(result);

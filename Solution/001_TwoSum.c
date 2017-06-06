@@ -22,36 +22,35 @@ int* twoSum(int* nums, int numsSize, int target) {
     *(tmp + i + 1) = key;
   }
 
-  for(i = numsSize - 1; i >= 0; i--) {
+  for(i = numsSize - 1; i > 0; i--) {
     if(*(tmp + i) * 2 < target) {
       break;
     }
 
-    if((*(tmp + i) <= target) && (*(tmp + i) * 2 >= target)) {
-      for(j = 0; j < i; j++) {
-        if(*(tmp + i) + *(tmp + j) > target) {
-            break;
-        }
+    for(j = 0; j < i; j++) {
+      if(*(tmp + i) + *(tmp + j) > target) {
+          break;
+      }
 
-        if(*(tmp + i) + *(tmp + j) == target) {
-          int m = 0;
-          int n = 0;
+      if(*(tmp + i) + *(tmp + j) == target) {
+        int m = 0;
+        int n = 0;
 
-          for(m = 0; m < numsSize; m++) {
-            if((*(tmp + i) == *(nums + m)) || (*(tmp + j) == *(nums + m))) {
-              if(n == 0) {
-                *res = m;
-                n++;
-              }
-              else {
-                *(res + 1) = m;
-              }
+        for(m = 0; m < numsSize; m++) {
+          if((*(tmp + i) == *(nums + m)) || (*(tmp + j) == *(nums + m))) {
+            if(n == 0) {
+              *res = m;
+              n++;
+            }
+            else {
+              *(res + 1) = m;
             }
           }
-          free(tmp);
-          tmp = NULL;
-          return res;
         }
+        free(tmp);
+        tmp = NULL;
+
+        return res;
       }
     }
   }
@@ -60,5 +59,6 @@ int* twoSum(int* nums, int numsSize, int target) {
   *(res + 1) = 0;
   free(tmp);
   tmp = NULL;
+
   return res;
 }
