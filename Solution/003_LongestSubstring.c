@@ -20,8 +20,8 @@ int lengthOfLongestSubstring(char* s) {
 			}
 			else {
 				if(j == startidx) {
-					if(retval < i - j + 1) {
-						retval = i - j + 1;
+					if(retval < i - startidx + 1) {
+						retval = i - startidx + 1;
 					}
 				}
 			}
