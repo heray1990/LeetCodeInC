@@ -72,11 +72,11 @@ Given `"bbbbb"`, the answer is `"b"`, with the length of 1.
 
 Given `"pwwkew"`, the answer is `"wke"`, with the length of 3. Note that the answer must be a **substring**, `"pwke"` is a *subsequence* and not a substring.
 
-![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/003_LongestSubstring.gif)
-
 **Source code:**
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/003_LongestSubstring.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/003_LongestSubstring.c)
+
+![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/003_LongestSubstring.gif)
 
 ## #9 Palindrome Number
 
@@ -88,13 +88,11 @@ Given `"pwwkew"`, the answer is `"wke"`, with the length of 3. Note that the ans
 
 Determine whether an integer is a palindrome. Do this without extra space.
 
-**Example:**
-
-![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/009_PalindromeNumber.gif)
-
 **Source code:**
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/009_PalindromeNumber.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/009_PalindromeNumber.c)
+
+![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/009_PalindromeNumber.gif)
 
 **Note:**
 
