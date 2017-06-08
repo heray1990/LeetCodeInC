@@ -8,6 +8,7 @@ C stuffs in leetcode.com
 - [#2 Add Two Numbers](https://github.com/heray1990/LeetCodeInC#2-add-two-numbers)
 - [#3 Longest Substring Without Repeating Characters](https://github.com/heray1990/LeetCodeInC#3-longest-substring-without-repeating-characters)
 - [#4 Median of Two Sorted Arrays](https://github.com/heray1990/LeetCodeInC#4-median-of-two-sorted-arrays)
+- [#5 Longest Palindromic Substring](https://github.com/heray1990/LeetCodeInC#5-longest-palindromic-substring)
 - [#9 Palindrome Number](https://github.com/heray1990/LeetCodeInC#9-palindrome-number)
 
 ## #1 Two Sum
@@ -106,6 +107,28 @@ The median is (2 + 3)/2 = 2.5
 **Source code:**
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/004_MedianOfTwoSortedArrays.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/004_MedianOfTwoSortedArrays.c)
+
+## #5 Longest Palindromic Substring
+
+Given a string **s**, find the longest palindromic substring in **s**. You may assume that the maximum length of **s** is 1000.
+
+**Example:**
+
+```
+Input: "babad"
+
+Output: "bab"
+
+Note: "aba" is also a valid answer.
+```
+
+**Example:**
+
+```
+Input: "cbbd"
+
+Output: "bb"
+```
 
 ## #9 Palindrome Number
 
