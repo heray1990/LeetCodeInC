@@ -27,10 +27,10 @@ int lengthOfLongestSubstring(char* s) {
 			}
 		}
 
-		/* Break the loop when the length of remaind items is smaller than
+		/* Break the loop when the length of remaind items isn't larger than
 		 * retval.
 		 */
-		if(len - startidx < retval) {
+		if(len - startidx <= retval) {
 			break;
 		}
 	}
