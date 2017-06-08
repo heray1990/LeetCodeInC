@@ -72,6 +72,8 @@ Given `"bbbbb"`, the answer is `"b"`, with the length of 1.
 
 Given `"pwwkew"`, the answer is `"wke"`, with the length of 3. Note that the answer must be a **substring**, `"pwke"` is a *subsequence* and not a substring.
 
+![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/003_LongestSubstring.gif)
+
 **Source code:**
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/003_LongestSubstring.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/003_LongestSubstring.c)
@@ -86,6 +88,10 @@ Given `"pwwkew"`, the answer is `"wke"`, with the length of 3. Note that the ans
 
 Determine whether an integer is a palindrome. Do this without extra space.
 
+**Example:**
+
+![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/009_PalindromeNumber.gif)
+
 **Source code:**
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/009_PalindromeNumber.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/009_PalindromeNumber.c)
@@ -95,7 +101,3 @@ Determine whether an integer is a palindrome. Do this without extra space.
 - There is not a "bool" type in C.
 - "^" computes the bitwise XOR in C. Thus "10^4" can NOT get 10000(fourth power of 10) in C.
 - [This modification](https://github.com/heray1990/LeetCodeInC/commit/f0c8107e3329eae74d9d2518adcb676ce3fd681d) shows two different ways to caculate the digit number of an integer number. Note that one of them fails to caculate the digit number of 1410110141.
-
-**Example:**
-
-![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/009_PalindromeNumber.gif)
