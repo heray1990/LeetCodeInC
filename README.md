@@ -7,6 +7,7 @@ C stuffs in leetcode.com
 - [#1 Two Sum](https://github.com/heray1990/LeetCodeInC#1-two-sum)
 - [#2 Add Two Numbers](https://github.com/heray1990/LeetCodeInC#2-add-two-numbers)
 - [#3 Longest Substring Without Repeating Characters](https://github.com/heray1990/LeetCodeInC#3-longest-substring-without-repeating-characters)
+- [#4 Median of Two Sorted Arrays](https://github.com/heray1990/LeetCodeInC#4-median-of-two-sorted-arrays)
 - [#9 Palindrome Number](https://github.com/heray1990/LeetCodeInC#9-palindrome-number)
 
 ## #1 Two Sum
@@ -77,6 +78,30 @@ Given `"pwwkew"`, the answer is `"wke"`, with the length of 3. Note that the ans
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/003_LongestSubstring.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/003_LongestSubstring.c)
 
 ![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/003_LongestSubstring.gif)
+
+## #4 Median of Two Sorted Arrays
+
+There are two sorted arrays **nums1** and **nums2** of size m and n respectively.
+
+Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+
+**Example 1:**
+
+```
+nums1 = [1, 3]
+nums2 = [2]
+
+The median is 2.0
+```
+
+**Example 2:**
+
+```
+nums1 = [1, 2]
+nums2 = [3, 4]
+
+The median is (2 + 3)/2 = 2.5
+```
 
 ## #9 Palindrome Number
 
