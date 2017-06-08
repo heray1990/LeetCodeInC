@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int lengthOfLongestSubstring(char* s) {
 	int startidx = 0;
 	int len = 0;
@@ -36,10 +34,4 @@ int lengthOfLongestSubstring(char* s) {
 	}
 
 	return retval;
-}
-
-int main() {
-	char *s = "pwwkew";
-
-	printf("%d\n", lengthOfLongestSubstring(s));
 }
