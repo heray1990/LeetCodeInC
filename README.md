@@ -103,6 +103,10 @@ nums2 = [3, 4]
 The median is (2 + 3)/2 = 2.5
 ```
 
+**Source code:**
+
+[https://github.com/heray1990/LeetCodeInC/blob/master/Solution/004_MedianOfTwoSortedArrays.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/004_MedianOfTwoSortedArrays.c)
+
 ## #9 Palindrome Number
 
 **Link in leetcode.com:**
