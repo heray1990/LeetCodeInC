@@ -74,6 +74,8 @@ Given `"pwwkew"`, the answer is `"wke"`, with the length of 3. Note that the ans
 
 **Source code:**
 
+[https://github.com/heray1990/LeetCodeInC/blob/master/Solution/003_LongestSubstring.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/003_LongestSubstring.c)
+
 ## #9 Palindrome Number
 
 **Link in leetcode.com:**
