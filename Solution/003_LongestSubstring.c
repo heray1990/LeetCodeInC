@@ -18,6 +18,13 @@ int lengthOfLongestSubstring(char* s) {
 				}
 				break;
 			}
+			else {
+				if(j == startidx) {
+					if(retval < i - j + 1) {
+						retval = i - j + 1;
+					}
+				}
+			}
 		}
 
 		/* Break the loop when the length of remaind items is smaller than
