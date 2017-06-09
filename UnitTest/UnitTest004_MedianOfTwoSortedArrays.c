@@ -4,7 +4,7 @@
 double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Size) {
 	int i = 0, j = 0, k = 0;
 	int nums3Size = nums1Size + nums2Size;
-	int* nums3 = malloc(nums3Size * sizeof(int));
+	int* nums3 = (int*)malloc(nums3Size * sizeof(int));
 	int medianIdx = 0;
 	double median = 0.0;
 

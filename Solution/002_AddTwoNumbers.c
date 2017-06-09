@@ -5,11 +5,12 @@
  *     struct ListNode *next;
  * };
  */
+
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
 	int tmp = 0;
 
 	struct ListNode* retls = NULL;
-	retls = malloc(sizeof(struct ListNode));
+	retls = (struct ListNode*)malloc(sizeof(struct ListNode));
 	if(retls == NULL) {
 		printf("malloc failed!\n");
 		return retls;
@@ -30,7 +31,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
 		}
 		else {
 			// Adding an new item to the end of the retls.
-			curret->next = malloc(sizeof(struct ListNode));
+			curret->next = (struct ListNode*)malloc(sizeof(struct ListNode));
 			curret->next->val = tmp / 10;
 			curret->next->next = NULL;
 			curret = curret->next;
@@ -48,7 +49,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
 			curret->next = NULL;
 		}
 		else {
-			curret->next = malloc(sizeof(struct ListNode));
+			curret->next = (struct ListNode*)malloc(sizeof(struct ListNode));
 			curret->next->val = tmp / 10;
 			curret->next->next = NULL;
 			curret = curret->next;
@@ -65,7 +66,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
 			curret->next = NULL;
 		}
 		else {
-			curret->next = malloc(sizeof(struct ListNode));
+			curret->next = (struct ListNode*)malloc(sizeof(struct ListNode));
 			curret->next->val = tmp / 10;
 			curret->next->next = NULL;
 			curret = curret->next;
