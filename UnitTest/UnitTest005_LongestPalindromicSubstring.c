@@ -3,7 +3,7 @@
 
 char* longestPalindrome(char* s) {
 	int sLen = 0, scanLen = 0;
-	int i = 0, j = 0, k = 0, m = 0, n = 0;
+	int i = 0, j = 0, m = 0, n = 0;
 	int startIdx = 0;
 	int charMatch = 0;
 	char* retStr = NULL;
@@ -22,15 +22,13 @@ char* longestPalindrome(char* s) {
 	for(i = 0; i <= sLen - scanLen; i++) {
 		if(scanLen % 2 == 0) {
 			j = (i + i + scanLen - 1) / 2;
-			k = j + 1;
 		}
 		else {
 			j = (i + i + scanLen - 1) / 2 - 1;
-			k = j + 2;
 		}
 
 		n = i + scanLen - 1;
-		printf("i = %d, j = %d, k = %d, scanLen = %d\n", i, j, k, scanLen);
+		printf("i = %d, j = %d, scanLen = %d\n", i, j, scanLen);
 		for(m = i; m <= j; m++) {
 			printf("m = %d, n = %d\n", m, n);
 			if(*(s + m) == *(s + n)) {
@@ -82,8 +80,8 @@ char* longestPalindrome(char* s) {
 
 int main() {
 	int i = 0;
-	//char *s = "babadcefecdbaba";
-	char *s = "dddddddd";
+	char *s = "babadcefecdbaba";
+	//char *s = "dddddddd";
 	char *res = longestPalindrome(s);
 
 	printf("\nInput: ");
