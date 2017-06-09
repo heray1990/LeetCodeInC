@@ -5,7 +5,7 @@ char* longestPalindrome(char* s) {
 	int len = 0, curLen = 0;
 	int h = 0, i = 0, j = 0, k = 0;
 	int startIdx = 0, endIdx = 0;
-	int flag = 0;
+	int flag = 0, subStrFound = 0;
 	char* retStr = NULL;
 
 	// Get the length of string s.
@@ -19,13 +19,16 @@ char* longestPalindrome(char* s) {
 
 	for(i = 0; i < len; i++) {
 		if(flag == 0) {
-			i = h;
 			k = len - 1;
+			if(subStrFound == 0) {
+				i = h;
+				startIdx = 0;
+				endIdx = 0;
+			}
 		}
 		else {
-			if(i == j - 1) {
-				// Find a Palindromic Substring.
-				i = j - 1;
+			if(subStrFound > 0) {
+				h = i;
 				k = len - 1;
 				flag = 0;
 			}
@@ -34,10 +37,8 @@ char* longestPalindrome(char* s) {
 			}
 		}
 
-		printf("i = %d, j = %d, k = %d\n", i, j, k);
 		for(j = k; j > i; j--) {
 			if(*(s + i) == *(s + j)) {
-				printf("----i = %d, j = %d\n", i, j);
 				if(flag == 0) {
 					if(curLen < j - i + 1) {
 						startIdx = i;
@@ -57,8 +58,12 @@ char* longestPalindrome(char* s) {
 			}
 		}
 
-		if(flag == 1) {
+		if((flag == 1) && (j - i <=2)) {
+			// A Palindromic Substring is found.
+			subStrFound = 1;
+
 			curLen = endIdx - startIdx + 1;
+			printf("A Palindromic Substring is found.\n");
 			printf("startIdx = %d\n", startIdx);
 			printf("endIdx = %d\n", endIdx);
 			printf("curLen = %d\n", curLen);
@@ -66,6 +71,9 @@ char* longestPalindrome(char* s) {
 	}
 
 	if(curLen > 0) {
+		printf("Longest Palindromic Substring: startIdx = %d\n", startIdx);
+		printf("Longest Palindromic Substring: endIdx = %d\n", endIdx);
+		printf("Longest Palindromic Substring: curLen = %d\n", curLen);
 		retStr = malloc(curLen * sizeof(char));
 
 		for(i = startIdx; i <= endIdx; i++) {
@@ -80,8 +88,15 @@ char* longestPalindrome(char* s) {
 }
 
 int main() {
-	//char *s = "dcefecdbaba";
-	char *s = "babadcefecdbaba";
+	//char *s = "babadcefecdbaba";
+	int i = 0;
+	char *s = "abacca";
+	char *res = longestPalindrome(s);
 
-	printf("%s\n", longestPalindrome(s));
+	printf("\nInput: ");
+	while(*(s + i) != '\0') {
+		printf("%c", *(s + i));
+		i++;
+	}
+	printf("\nOutput: %s\n", res);
 }
