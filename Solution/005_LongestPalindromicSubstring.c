@@ -61,6 +61,10 @@ char* longestPalindrome(char* s) {
 		for(i = startIdx; i < startIdx + scanLen; i++) {
 			*(retStr + i - startIdx) = *(s + i);
 		}
+		else {
+			retStr = malloc(sizeof(char));
+			*retStr = *s;
+		}
 	}
 
 	return retStr;

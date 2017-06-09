@@ -72,7 +72,9 @@ char* longestPalindrome(char* s) {
 		}
 	}
 	else {
-		printf("There is not palindromic substring in string s.\n");
+		printf("There is repeating characters in string s. Pick first character as the Palindromic Substring.\n");
+		retStr = malloc(sizeof(char));
+		*retStr = *s;
 	}
 
 	return retStr;
@@ -81,6 +83,7 @@ char* longestPalindrome(char* s) {
 int main() {
 	int i = 0;
 	char *s = "babadcefecdbaba";
+	//char *s = "abcda";
 	char *res = longestPalindrome(s);
 
 	printf("\nInput: ");
@@ -89,4 +92,7 @@ int main() {
 		i++;
 	}
 	printf("\nOutput: %s\n", res);
+
+	free(res);
+	res = NULL;
 }
