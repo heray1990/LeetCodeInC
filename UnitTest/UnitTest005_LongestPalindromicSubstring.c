@@ -63,16 +63,19 @@ char* longestPalindrome(char* s) {
 		startIdx = m - scanLen / 2;
 		printf("Longest Palindromic Substring: startIdx = %d\n", startIdx);
 		printf("Longest Palindromic Substring: length = %d\n", scanLen);
-		retStr = (char*)malloc(scanLen * sizeof(char));
+		retStr = (char*)malloc((scanLen + 1) * sizeof(char));
 
 		for(i = startIdx; i < startIdx + scanLen; i++) {
 			*(retStr + i - startIdx) = *(s + i);
 		}
+		
+		*(retStr + scanLen) = '\0';
 	}
 	else {
 		printf("There is repeating characters in string s. Pick first character as the Palindromic Substring.\n");
-		retStr = (char*)malloc(sizeof(char));
+		retStr = (char*)malloc(2 * sizeof(char));
 		*retStr = *s;
+		*(retStr + 1) = '\0';
 	}
 
 	return retStr;
