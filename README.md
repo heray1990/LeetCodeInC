@@ -134,6 +134,8 @@ Output: "bb"
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/005_LongestPalindromicSubstring.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/005_LongestPalindromicSubstring.c)
 
+![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/005_LongestPalindromicSubstring.gif)
+
 ## #9 Palindrome Number
 
 **Link in leetcode.com:**
