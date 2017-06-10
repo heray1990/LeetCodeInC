@@ -130,6 +130,10 @@ Input: "cbbd"
 Output: "bb"
 ```
 
+**Source code:**
+
+[https://github.com/heray1990/LeetCodeInC/blob/master/Solution/005_LongestPalindromicSubstring.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/005_LongestPalindromicSubstring.c)
+
 ## #9 Palindrome Number
 
 **Link in leetcode.com:**
