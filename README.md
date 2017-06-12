@@ -9,6 +9,7 @@ C stuffs in leetcode.com
 - [#3 Longest Substring Without Repeating Characters](https://github.com/heray1990/LeetCodeInC#3-longest-substring-without-repeating-characters)
 - [#4 Median of Two Sorted Arrays](https://github.com/heray1990/LeetCodeInC#4-median-of-two-sorted-arrays)
 - [#5 Longest Palindromic Substring](https://github.com/heray1990/LeetCodeInC#5-longest-palindromic-substring)
+- [#6 ZigZag Conversion](https://github.com/heray1990/LeetCodeInC#6-zigzag-conversion)
 - [#9 Palindrome Number](https://github.com/heray1990/LeetCodeInC#9-palindrome-number)
 
 ## #1 Two Sum
@@ -135,6 +136,36 @@ Output: "bb"
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/005_LongestPalindromicSubstring.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/005_LongestPalindromicSubstring.c)
 
 ![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/005_LongestPalindromicSubstring.gif)
+
+## #6 ZigZag Conversion
+
+**Link in leetcode.com:**
+
+[https://leetcode.com/problems/zigzag-conversion/#/description](https://leetcode.com/problems/zigzag-conversion/#/description)
+
+**Problem description:**
+
+The string `"PAYPALISHIRING"` is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+
+```
+P   A   H   N
+A P L S I I G
+Y   I   R
+```
+
+And then read line by line: `"PAHNAPLSIIGYIR"`
+
+Write the code that will take a string and make this conversion given a number of rows:
+
+```
+string convert(string text, int nRows);
+```
+
+`convert("PAYPALISHIRING", 3)` should return `"PAHNAPLSIIGYIR"`.
+
+**Source code:**
+
+[https://github.com/heray1990/LeetCodeInC/blob/master/Solution/006_ZigZagConversion.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/006_ZigZagConversion.c)
 
 ## #9 Palindrome Number
 
