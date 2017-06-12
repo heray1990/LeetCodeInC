@@ -52,7 +52,7 @@ char* convert(char* s, int numRows) {
 			}
 
 			if(j % (numRows - 1) > 0) {
-				numTmp = (numRows - 1) + j % (numRows - 1) + divisor * (j / 3); 
+				numTmp = (numRows - 1) + j % (numRows - 1) + divisor * (j / (numRows - 1)); 
 				if(numTmp >= sLen) {
 					break;
 				}

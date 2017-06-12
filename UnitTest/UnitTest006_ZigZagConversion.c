@@ -55,7 +55,7 @@ char* convert(char* s, int numRows) {
 			}
 
 			if(j % (numRows - 1) > 0) {
-				numTmp = (numRows - 1) + j % (numRows - 1) + divisor * (j / 3); 
+				numTmp = (numRows - 1) + j % (numRows - 1) + divisor * (j / (numRows - 1)); 
 				if(numTmp >= sLen) {
 					break;
 				}
@@ -103,6 +103,7 @@ int main() {
 	retStr = convert(s, numRows);
 
 	printf("Input: %s\n", s);
+	printf("Rows: %d\n", numRows);
 	printf("Output: %s\n", retStr);
 
 	free(retStr);
