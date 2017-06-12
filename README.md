@@ -10,6 +10,7 @@ C stuffs in leetcode.com
 - [#4 Median of Two Sorted Arrays](https://github.com/heray1990/LeetCodeInC#4-median-of-two-sorted-arrays)
 - [#5 Longest Palindromic Substring](https://github.com/heray1990/LeetCodeInC#5-longest-palindromic-substring)
 - [#6 ZigZag Conversion](https://github.com/heray1990/LeetCodeInC#6-zigzag-conversion)
+- [#7 Reverse Integer](https://github.com/heray1990/LeetCodeInC#7-reverse-integer)
 - [#9 Palindrome Number](https://github.com/heray1990/LeetCodeInC#9-palindrome-number)
 
 ## #1 Two Sum
@@ -166,6 +167,38 @@ string convert(string text, int nRows);
 **Source code:**
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/006_ZigZagConversion.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/006_ZigZagConversion.c)
+
+## #7 Reverse Integer
+
+**Link in leetcode.com:**
+
+[https://leetcode.com/problems/reverse-integer/#/description](https://leetcode.com/problems/reverse-integer/#/description)
+
+**Problem description:**
+
+Reverse digits of an integer.
+
+**Example1:** x = 123, return 321
+
+**Example2:** x = -123, return -321
+
+**Have you thought about this?**
+
+Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!
+
+If the integer's last digit is 0, what should the output be? ie, cases such as 10, 100.
+
+Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer, then the reverse of 1000000003 overflows. How should you handle such cases?
+
+For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+
+**Note:**
+
+The input is assumed to be a 32-bit signed integer. Your function should **return 0 when the reversed integer overflows**.
+
+**Source code:**
+
+[https://github.com/heray1990/LeetCodeInC/blob/master/Solution/007_ReverseInteger.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/007_ReverseInteger.c)
 
 ## #9 Palindrome Number
 
