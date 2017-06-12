@@ -1,70 +1,70 @@
 #include <stdio.h>
 
 typedef enum {
-  false,
-  true
+	false,
+	true
 } bool;
 
 bool isPalindrome(int x) {
-  int digitCnt = 0;
-  int n, i, k, resPower, remainder, quotient;
+	int digitCnt = 0;
+	int n, i, k, resPower, remainder, quotient;
 
-  if (x < 0)
-    return false;
+	if(x < 0)
+		return false;
 
-  if (x >= 0 && x < 10)
-    return true;
+	if(x >= 0 && x < 10)
+		return true;
 
-  k = x;
-  do {
-    digitCnt++;
-    k = k / 10; 
-  } while (k != 0);
-  printf("The digit number of %d is %d.\n", x, digitCnt);
+	k = x;
+	do {
+		digitCnt++;
+		k = k / 10; 
+	} while (k != 0);
+	printf("The digit number of %d is %d.\n", x, digitCnt);
 
-  k = digitCnt;
-  for (n = 1; n <= (digitCnt / 2); n++) {
-    resPower = 1;
-    for (i = 0; i < (k - 1); i++) {
-      resPower *= 10;
-    }
-    remainder = x % 10;
-    quotient = x / resPower;
+	k = digitCnt;
+	for(n = 1; n <= (digitCnt / 2); n++) {
+		resPower = 1;
+		for(i = 0; i < (k - 1); i++) {
+			resPower *= 10;
+		}
+		remainder = x % 10;
+		quotient = x / resPower;
 
-    printf("Loop: %d\n", n);
-    printf("The rightmost digit is %d\n", remainder);
-    printf("The leftmost digit is %d\n", quotient);
+		printf("Loop: %d\n", n);
+		printf("The rightmost digit is %d\n", remainder);
+		printf("The leftmost digit is %d\n", quotient);
 
-    if (remainder != quotient)
-      return false;
+		if(remainder != quotient)
+			return false;
 
-    printf("Change x from %d ", x);
-    x -= resPower * quotient;
-    x /= 10;
-    k -= 2;
-    printf("to %d.\n", x);
-  }
+		printf("Change x from %d ", x);
+		x -= resPower * quotient;
+		x /= 10;
+		k -= 2;
+		printf("to %d.\n", x);
+	}
 
-  return true;
+	return true;
 }
 
 int main() {
-  int a;
-  bool res;
+	int a;
+	bool res;
 
-  printf("Please enter a non-negative integer: ");
-  scanf("%d", &a);
+	printf("Please enter a non-negative integer: ");
+	scanf("%d", &a);
 
-  if (a < 0) {
-    printf("Your number is illegal!\n");
-    return 0;
-  }
+	if(a < 0) {
+		printf("Your number is illegal!\n");
+		return 0;
+	}
 
-  res = isPalindrome(a);
-  if (res)
-    printf("The number is a Palindrome Number.\n"); 
-  else
-    printf("The number is NOT a Palindrome Number.\n"); 
+	res = isPalindrome(a);
+	if(res)
+		printf("The number is a Palindrome Number.\n"); 
+	else
+		printf("The number is NOT a Palindrome Number.\n"); 
 
-  return 1;
+	return 1;
 }
