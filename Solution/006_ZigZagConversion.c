@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 char* convert(char* s, int numRows) {
 	int i = 0, j = 0, k = 0;
 	int sLen = 0;
@@ -85,26 +82,4 @@ char* convert(char* s, int numRows) {
 	matrix = NULL;
 
 	return retStr;
-}
-
-int main() {
-	int numRows = 3;
-	int sLen = 0;
-	char *s = "PAYPALISHIRING";
-	char *retStr = NULL;
-
-	while(*(s + sLen) != '\0') {
-		sLen++;
-	}
-
-	retStr = (char *)malloc((sLen + 1) * sizeof(char));
-	*(retStr + sLen) = '\0';
-
-	retStr = convert(s, numRows);
-
-	printf("Input: %s\n", s);
-	printf("Output: %s\n", retStr);
-
-	free(retStr);
-	retStr = NULL;
 }
