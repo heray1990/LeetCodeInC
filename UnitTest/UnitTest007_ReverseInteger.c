@@ -6,7 +6,8 @@ int reverse(int x) {
 	const int max = 2147483647;
 	const int min = -2147483648;
 	int i = 0;
-	int len = 0;
+	int tmp = 0, divisor = 0;
+	int len = 0, maxLen = 0;
 
 	if((x > -10) && (x < 10)) {
 		return x;
@@ -18,14 +19,25 @@ int reverse(int x) {
 		i = i / 10;
 	} while(i != 0);
 
+	i = max;
+	do {
+		maxLen++;
+		i = i / 10;
+	} while(i != 0);
+
 	if(len > 10) {
 		// Overflow
 		return 0;
 	}
-	else if(len == 10) {
-		for(i = 0; i <= 10; i++) {
+	else if(len == maxLen) {
+		divisor = 1;
+		for(i = maxLen; i >= 0; i--) {
+			divisor *= 10;
 			if(x >= 0) {
-				if(x % 10 > )
+				if(x % divisor - tmp > ) {
+
+				}
+				tmp = x % divisor;
 			}
 		}
 	}
