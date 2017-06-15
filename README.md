@@ -11,6 +11,7 @@ C stuffs in leetcode.com
 - [#5 Longest Palindromic Substring](https://github.com/heray1990/LeetCodeInC#5-longest-palindromic-substring)
 - [#6 ZigZag Conversion](https://github.com/heray1990/LeetCodeInC#6-zigzag-conversion)
 - [#7 Reverse Integer](https://github.com/heray1990/LeetCodeInC#7-reverse-integer)
+- [#8 String to Integer (atoi)](https://github.com/heray1990/LeetCodeInC#8-string-to-integer-atoi)
 - [#9 Palindrome Number](https://github.com/heray1990/LeetCodeInC#9-palindrome-number)
 
 ## #1 Two Sum
