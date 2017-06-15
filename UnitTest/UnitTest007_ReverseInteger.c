@@ -47,12 +47,12 @@ int reverse(int x) {
 				divisor *= 10;
 			}
 
-			//printf("tmp1 = %d, tmp2 = %d\n", tmp1, tmp2);
+			printf("tmp1 = %d, tmp2 = %d\n", tmp1, tmp2);
 			if(abs(tmp1 % 10) > abs(tmp2 / divisor)) {
 				// Overflow
 				return 0;
 			}
-			else {
+			else if(abs(tmp1 % 10) < abs(tmp2 / divisor)) {
 				break;
 			}
 			tmp1 = tmp1 / 10;
@@ -79,7 +79,8 @@ int reverse(int x) {
 }
 
 int main() {
-	int x = 123;
+	int x = 1563847412;
+	//int x = -1000000002;
 	int res = 0;
 	
 	res = reverse(x);

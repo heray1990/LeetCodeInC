@@ -49,7 +49,7 @@ int reverse(int x) {
 				// Overflow
 				return 0;
 			}
-			else {
+			else if(abs(tmp1 % 10) < abs(tmp2 / divisor)) {
 				break;
 			}
 			tmp1 = tmp1 / 10;
