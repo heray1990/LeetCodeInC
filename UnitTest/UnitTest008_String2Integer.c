@@ -17,15 +17,17 @@ int myAtoi(char* str) {
 	// ASCII: '0' => 48, '9' => 57
 	while(str[i] != '\0') {
 		if(((str[i] >= '0') && (str[i] <= '9')) 
-			|| (((str[i] == '-') || (str[i] == '+')) && (numCnt == 0))) {
+			|| (((str[i] == '-') || (str[i] == '+')) && (flag == 0))) {
 			if(str[i] == '-') {
 				sign = -1;
 				i++;
+				flag = 1;
 				continue;
 			}
 			if(str[i] == '+') {
 				sign = 1;
 				i++;
+				flag = 1;
 				continue;
 			}
 
@@ -56,18 +58,19 @@ int myAtoi(char* str) {
 				res = res * 10 + sign * (str[i] - 48);
 			}
 		}
+		else {
+			return res;
+		}
 
 		i++;
 	}
-
-	printf("numCnt: %d\n", numCnt);
 
 	return res;
 }
 
 int main() {
-	//char *str = "  -0+-123";
-	char *str = "-+2147-483640";
+	//char *str = "+-2";
+	char *str = "a-214748364a0";
 	int res = 0;
 
 	res = myAtoi(str);
