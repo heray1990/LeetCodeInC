@@ -39,7 +39,7 @@ int myAtoi(char* str) {
 							(res == INT_MAX / 10) 
 							&& (sign * (str[i] - 48) > INT_MAX % 10)) {
 							// Overflow
-							return 0;
+							return INT_MAX;
 						}
 					}
 					if(sign == -1) {
@@ -47,13 +47,19 @@ int myAtoi(char* str) {
 							(res == INT_MIN / 10) 
 							&& (sign * (str[i] - 48) < INT_MIN % 10)) {
 							// Overflow
-							return 0;
+							return INT_MIN;
 						}
 					}
 				}
 				if(numCnt > maxLen) {
 					// Overflow
-					return 0;
+					if(sign == 1) {
+					    return INT_MAX;
+					}
+					
+					if(sign == -1) {
+					    return INT_MIN;
+					}
 				}
 				res = res * 10 + sign * (str[i] - 48);
 			}
