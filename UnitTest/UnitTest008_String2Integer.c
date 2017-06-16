@@ -59,8 +59,9 @@ int myAtoi(char* str) {
 			}
 		}
 		else {
-			if(numCnt > 0) {
-				return res;
+			if((numCnt > 0) || (flag == 1)
+				|| ((numCnt == 0) && (str[i] != ' '))) {
+				break;
 			}
 		}
 
@@ -72,7 +73,7 @@ int myAtoi(char* str) {
 
 int main() {
 	char *str = "    010";
-	//char *str = "a-214748364a0";
+	//char *str = "+-2";
 	int res = 0;
 
 	res = myAtoi(str);
