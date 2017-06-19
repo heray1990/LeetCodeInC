@@ -258,6 +258,12 @@ Determine whether an integer is a palindrome. Do this without extra space.
 
 ## #10 Regular Expression Matching
 
+**Link in leetcode.com:**
+
+[https://leetcode.com/problems/regular-expression-matching/#/description](https://leetcode.com/problems/regular-expression-matching/#/description)
+
+**Problem description:**
+
 Implement regular expression matching with support for `'.'` and `'*'`.
 
 ```
