@@ -13,6 +13,7 @@ C stuffs in leetcode.com
 - [#7 Reverse Integer](https://github.com/heray1990/LeetCodeInC#7-reverse-integer)
 - [#8 String to Integer (atoi)](https://github.com/heray1990/LeetCodeInC#8-string-to-integer-atoi)
 - [#9 Palindrome Number](https://github.com/heray1990/LeetCodeInC#9-palindrome-number)
+- [#10 Regular Expression Matching](https://github.com/heray1990/LeetCodeInC#10-regular-expression-matching)
 
 ## #1 Two Sum
 
@@ -254,3 +255,27 @@ Determine whether an integer is a palindrome. Do this without extra space.
 - There is not a "bool" type in C.
 - "^" computes the bitwise XOR in C. Thus "10^4" can NOT get 10000(fourth power of 10) in C.
 - [This modification](https://github.com/heray1990/LeetCodeInC/commit/f0c8107e3329eae74d9d2518adcb676ce3fd681d) shows two different ways to caculate the digit number of an integer number. Note that one of them fails to caculate the digit number of 1410110141.
+
+## #10 Regular Expression Matching
+
+Implement regular expression matching with support for `'.'` and `'*'`.
+
+```
+'.' Matches any single character.
+'*' Matches zero or more of the preceding element.
+
+The matching should cover the entire input string (not partial).
+
+The function prototype should be:
+bool isMatch(const char *s, const char *p)
+
+Some examples:
+isMatch("aa","a") → false
+isMatch("aa","aa") → true
+isMatch("aaa","aa") → false
+isMatch("aa", "a*") → true
+isMatch("aa", ".*") → true
+isMatch("ab", ".*") → true
+isMatch("aab", "c*a*b") → true
+```
+
