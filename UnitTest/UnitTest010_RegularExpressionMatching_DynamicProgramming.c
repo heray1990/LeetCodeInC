@@ -32,6 +32,8 @@ bool isMatch(const char *s, const char *p) {
 	}
 
 	table[0][0] = true;
+	i = 0;
+	j = 0;
 
 	for(j = 0; j < pLen; j++) {
 		if(p[j] != '*') {
@@ -69,9 +71,9 @@ bool isMatch(const char *s, const char *p) {
 
 	res = table[pLen][sLen];
 
-	for(i = 0; i < sLen; i++) {
-		free(*(table + i));
-		*(table + i) = NULL;
+	for(j = 0; j <= pLen; j++) {
+		free(*(table + j));
+		*(table + j) = NULL;
 	}
 	free(table);
 	table = NULL;
@@ -80,8 +82,8 @@ bool isMatch(const char *s, const char *p) {
 }
 
 int main() {
-	const char *s = "abcdddg";
-	const char *p = "a.*d*g";
+	const char *s = "abcd";
+	const char *p = "*d";
 
 	printf("Input:\"%s\", \"%s\"\n", s, p);
 	if(isMatch(s, p) == 1) {
