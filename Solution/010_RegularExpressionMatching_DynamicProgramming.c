@@ -1,12 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-typedef enum {
-	false,
-	true
-} bool;
-
 bool isMatch(const char *s, const char *p) {
 	int i = 0, j = 0;
 	int sLen = strlen(s);
@@ -81,19 +72,4 @@ bool isMatch(const char *s, const char *p) {
 	table = NULL;
 
 	return res;
-}
-
-int main() {
-	const char *s = "aab";
-	const char *p = "c*a*b";
-
-	printf("Input:\"%s\", \"%s\"\n", s, p);
-	if(isMatch(s, p) == 1) {
-		printf("Output: True\n");
-	}
-	else {
-		printf("Output: False\n");
-	}
-
-	return 1;
 }
