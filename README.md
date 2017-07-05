@@ -290,3 +290,7 @@ isMatch("aab", "c*a*b") → true
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/010_RegularExpressionMatching.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/010_RegularExpressionMatching.c)
 
 ![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/010_RegularExpressionMatching.gif)
+
+[https://github.com/heray1990/LeetCodeInC/blob/master/Solution/010_RegularExpressionMatching_DynamicProgramming.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/010_RegularExpressionMatching_DynamicProgramming.c)
+
+![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/010_RegularExpressionMatching_DynamicProgramming01.png)
