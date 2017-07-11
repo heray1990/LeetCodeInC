@@ -202,6 +202,8 @@ The input is assumed to be a 32-bit signed integer. Your function should **retur
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/007_ReverseInteger.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/007_ReverseInteger.c)
 
+![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/007_ReverseInteger.png)
+
 ## #8 String to Integer (atoi)
 
 **Link in leetcode.com:**

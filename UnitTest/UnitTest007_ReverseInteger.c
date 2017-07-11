@@ -17,21 +17,18 @@ int reverse(int x) {
 	int top = 0, end = 0;
 	long long temp = 0;
 
-	for(temp = x; temp > 0;) {
+	for(temp = x; temp > 0; top++) {
 		num[top] = temp % 10;
-		top++;
 		temp = temp / 10;
 	}
 
 	top--;
 
-	for(temp = 0, end = 0; end <= top;) {
+	for(temp = 0, end = 0; end <= top; end++) {
 		temp = temp * 10 + num[end];
 
 		if(temp >= INT_MAX)
 			return 0;
-
-		end++;
 	}
 
 	return temp;
