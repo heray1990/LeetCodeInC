@@ -170,6 +170,8 @@ string convert(string text, int nRows);
 
 [https://github.com/heray1990/LeetCodeInC/blob/master/Solution/006_ZigZagConversion.c](https://github.com/heray1990/LeetCodeInC/blob/master/Solution/006_ZigZagConversion.c)
 
+![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/006_ZigZagConversion.png)
+
 ## #7 Reverse Integer
 
 **Link in leetcode.com:**
