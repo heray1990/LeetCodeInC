@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
+#if 0
 char* longestPalindrome(char* s) {
 	int sLen = 0, scanLen = 0;
 	int i = 0, j = 0, m = 0, n = 0;
@@ -80,6 +82,72 @@ char* longestPalindrome(char* s) {
 
 	return retStr;
 }
+#else
+char* longestPalindrome(char* s) {
+	int sLen = strlen(s);
+	int **p = NULL;
+	int i = 0, j = 0, k = 0;
+	char *result = NULL;
+
+	if(sLen == 0)
+		return "";
+	if(sLen == 1)
+		return s;
+
+	p = (int **)malloc(sLen * sizeof(int *));
+	for(i = 0; i < sLen; i++) {
+		*(p + i) = (int *)malloc(sLen * sizeof(int));
+	}
+
+	// Base case
+	for(i = 0; i < sLen; i++) {
+		p[i][i] = 1;
+
+		if(i < sLen - 1) {
+			if(s[i] == s[i + 1])
+				p[i][i + 1] = 1;
+			else
+				p[i][i + 1] = 0;
+		}
+	}
+
+	for(i = sLen - 2; i >= 0; i--) {
+		for(j = i + 1; j < sLen; j++) {
+			if(p[i + 1][j - 1] == 1 && s[i] == s[j])
+				p[i][j] = 1;
+			else
+				p[i][j] = 0;
+		}
+	}
+
+	for(k = sLen - 1; k > 0; k--) {
+		for(i = 0, j = k; i < sLen - k; i++, j++) {
+			//printf("i = %d, j = %d, p[i][j] = %d\n", i, j, p[i][j]);
+			if(p[i][j] == 1)
+				break;
+		}
+		if(p[i][j] == 1)
+			break;
+	}
+
+	//printf("i = %d, j = %d, p[i][j] = %d\n", i, j, p[i][j]);
+	result = (char *)malloc((j - i + 2) * sizeof(char));
+
+	for(k = i; k < sLen; k++) {
+		result[k - i] = s[k];
+	}
+	result[j - i + 1] = '\0';
+
+	for(i = 0; i < sLen; i++) {
+		free(*(p + i));
+		*(p + i) = NULL;
+	}
+	free(p);
+	p = NULL;
+
+	return result;
+}
+#endif
 
 int main() {
 	int i = 0;
