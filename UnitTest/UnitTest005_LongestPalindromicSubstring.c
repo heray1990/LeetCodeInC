@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#if 0
+#if 0 
 char* longestPalindrome(char* s) {
 	int sLen = 0, scanLen = 0;
 	int i = 0, j = 0, m = 0, n = 0;
@@ -30,12 +30,12 @@ char* longestPalindrome(char* s) {
 		}
 
 		n = i + scanLen - 1;
-		printf("i = %d, j = %d, scanLen = %d\n", i, j, scanLen);
+		//printf("i = %d, j = %d, scanLen = %d\n", i, j, scanLen);
 		for(m = i; m <= j; m++) {
-			printf("m = %d, n = %d\n", m, n);
+			//printf("m = %d, n = %d\n", m, n);
 			if(*(s + m) == *(s + n)) {
 				charMatch++;
-				printf("s[%d] == s[%d], charMatch = %d\n", m, n, charMatch);
+				//printf("s[%d] == s[%d], charMatch = %d\n", m, n, charMatch);
 				n--;
 			}
 			else {
@@ -61,10 +61,10 @@ char* longestPalindrome(char* s) {
 	}
 
 	if(charMatch > 0) {
-		printf("m = %d\n", m);
+		//printf("m = %d\n", m);
 		startIdx = m - scanLen / 2;
-		printf("Longest Palindromic Substring: startIdx = %d\n", startIdx);
-		printf("Longest Palindromic Substring: length = %d\n", scanLen);
+		//printf("Longest Palindromic Substring: startIdx = %d\n", startIdx);
+		//printf("Longest Palindromic Substring: length = %d\n", scanLen);
 		retStr = (char*)malloc((scanLen + 1) * sizeof(char));
 
 		for(i = startIdx; i < startIdx + scanLen; i++) {
@@ -74,7 +74,7 @@ char* longestPalindrome(char* s) {
 		*(retStr + scanLen) = '\0';
 	}
 	else {
-		printf("There is repeating characters in string s. Pick first character as the Palindromic Substring.\n");
+		//printf("There is repeating characters in string s. Pick first character as the Palindromic Substring.\n");
 		retStr = (char*)malloc(2 * sizeof(char));
 		*retStr = *s;
 		*(retStr + 1) = '\0';
@@ -131,19 +131,19 @@ char* longestPalindrome(char* s) {
 	}
 
 	//printf("i = %d, j = %d, p[i][j] = %d\n", i, j, p[i][j]);
-	result = (char *)malloc((j - i + 2) * sizeof(char));
-
-	for(k = i; k < sLen; k++) {
-		result[k - i] = s[k];
-	}
-	result[j - i + 1] = '\0';
-
-	for(i = 0; i < sLen; i++) {
-		free(*(p + i));
-		*(p + i) = NULL;
+	for(k = 0; k < sLen; k++) {
+		free(*(p + k));
+		*(p + k) = NULL;
 	}
 	free(p);
 	p = NULL;
+
+	result = (char *)malloc((j - i + 2) * sizeof(char));
+
+	for(k = i; k < j + 1; k++) {
+		result[k - i] = s[k];
+	}
+	result[j - i + 1] = '\0';
 
 	return result;
 }
@@ -151,17 +151,21 @@ char* longestPalindrome(char* s) {
 
 int main() {
 	int i = 0;
-	char *s = "babadcefecdbaba";
+	//char *s = "babadcefecdbaba";
 	//char *s = "dddddddd";
-	char *res = longestPalindrome(s);
+	char *s = "civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth";
 
 	printf("\nInput: ");
 	while(*(s + i) != '\0') {
 		printf("%c", *(s + i));
 		i++;
 	}
+
+	char *res = longestPalindrome(s);
 	printf("\nOutput: %s\n", res);
 
 	free(res);
 	res = NULL;
+
+	return 1;
 }
