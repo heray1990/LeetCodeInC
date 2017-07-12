@@ -98,6 +98,11 @@ char* longestPalindrome(char* s) {
 	for(i = 0; i < sLen; i++) {
 		*(p + i) = (int *)malloc(sLen * sizeof(int));
 	}
+	for(i = 0; i < sLen; i++) {
+		for(j = 0; j < sLen; j++) {
+			p[i][j] = 0;
+		}
+	}
 
 	// Base case
 	for(i = 0; i < sLen; i++) {
@@ -115,8 +120,6 @@ char* longestPalindrome(char* s) {
 		for(j = i + 1; j < sLen; j++) {
 			if(p[i + 1][j - 1] == 1 && s[i] == s[j])
 				p[i][j] = 1;
-			else
-				p[i][j] = 0;
 		}
 	}
 
@@ -152,7 +155,7 @@ char* longestPalindrome(char* s) {
 int main() {
 	int i = 0;
 	//char *s = "babadcefecdbaba";
-	//char *s = "dddddddd";
+	//char *s = "cbbd";
 	char *s = "civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth";
 
 	printf("\nInput: ");
@@ -160,9 +163,10 @@ int main() {
 		printf("%c", *(s + i));
 		i++;
 	}
+	printf("\n");
 
 	char *res = longestPalindrome(s);
-	printf("\nOutput: %s\n", res);
+	printf("Output: %s\n", res);
 
 	free(res);
 	res = NULL;
