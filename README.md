@@ -140,6 +140,10 @@ Output: "bb"
 
 ![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/005_LongestPalindromicSubstring.gif)
 
+**Dynamic Programming**
+
+![](https://github.com/heray1990/LeetCodeInC/raw/master/Resources/005_LongestPalindromicSubstring_DP.png)
+
 ## #6 ZigZag Conversion
 
 **Link in leetcode.com:**
